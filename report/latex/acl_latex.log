@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  11 FEB 2026 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  11 FEB 2026 16:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -696,13 +696,17 @@ File: figures/training_loss.png Graphic file (type png)
 <use figures/training_loss.png>
 Package pdftex.def Info: figures/training_loss.png  used on input line 136.
 (pdftex.def)             Requested size: 219.08614pt x 140.16052pt.
- [3 <./figures/training_loss.png>]
-<figures/ngram_bleu_breakdown.png, id=182, 714.7503pt x 426.393pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./figures/training_loss.png>]
+<figures/ngram_bleu_breakdown.png, id=181, 714.7503pt x 426.393pt>
 File: figures/ngram_bleu_breakdown.png Graphic file (type png)
 <use figures/ngram_bleu_breakdown.png>
 Package pdftex.def Info: figures/ngram_bleu_breakdown.png  used on input line 196.
 (pdftex.def)             Requested size: 219.08614pt x 130.69704pt.
-<figures/attention_heatmap.png, id=184, 639.5895pt x 570.933pt>
+<figures/attention_heatmap.png, id=183, 639.5895pt x 570.933pt>
 File: figures/attention_heatmap.png Graphic file (type png)
 <use figures/attention_heatmap.png>
 Package pdftex.def Info: figures/attention_heatmap.png  used on input line 226.
@@ -729,15 +733,15 @@ Package rerunfilecheck Info: File `acl_latex.out' has not changed.
 (rerunfilecheck)             Checksum: C518310A3555D845FD4C4898C08CCE38;3029.
  ) 
 Here is how much of TeX's memory you used:
- 25246 strings out of 474116
- 467148 string characters out of 5743681
+ 25252 strings out of 474116
+ 467196 string characters out of 5743681
  1946187 words of memory out of 5000000
  46821 multiletter control sequences out of 15000+600000
- 617721 words of font info for 292 fonts, out of 8000000 for 9000
+ 617981 words of font info for 296 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,107p,1098b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,1098b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl_latex.pdf (6 pages, 346500 bytes).
+Output written on acl_latex.pdf (6 pages, 346718 bytes).
 PDF statistics:
  269 PDF objects out of 1000 (max. 8388607)
  226 compressed objects within 3 object streams

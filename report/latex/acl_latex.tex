@@ -129,12 +129,12 @@ The best configuration (learning rate $5 \times 10^{-5}$, no label smoothing) is
 
 \subsubsection{Training Details}
 
-The final model is trained with: batch size 16, learning rate $5 \times 10^{-5}$, weight decay 0.01, 500 warmup steps, max sequence length 128, and fp16 mixed precision. The best checkpoint by validation loss is saved for evaluation. Figure~\ref{fig:training_loss} shows the loss curves, which indicate stable convergence with no signs of overfitting.
+The final model is trained with: batch size 16, learning rate $5 \times 10^{-5}$, weight decay 0.01, 500 warmup steps, max sequence length 128, and fp16 mixed precision. The best checkpoint by validation loss is saved for evaluation. Figure~\ref{fig:training_loss} shows the loss curves: the validation loss decreases steadily, while the training loss shows two notable drops during training, suggesting the model makes discrete jumps in fitting the training data.
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{figures/training_loss.png}
-\caption{Training and validation loss over training steps. The training loss (blue) decreases steadily while the validation loss (red) converges, indicating stable fine-tuning.}
+\caption{Training and validation loss over training steps. The validation loss (red) decreases gradually throughout training, while the training loss (blue) exhibits two sharp drops at distinct stages, suggesting discrete improvements in the model's fit to the training data.}
 \label{fig:training_loss}
 \end{figure}
 
@@ -194,7 +194,7 @@ Our model keeps high scores at all n-gram levels (BLEU-1 = 0.5857, BLEU-4 = 0.21
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{figures/ngram_bleu_breakdown.png}
-\caption{N-gram BLEU breakdown across all three models. Our model (blue) keeps high scores at all n-gram levels, while Baseline~1 drops sharply beyond unigrams and Baseline~2 remains low throughout.}
+\caption{N-gram BLEU breakdown across all three models. Our model scores highest at every n-gram level. Baseline~1 outperforms Baseline~2 at BLEU-1 and BLEU-2, but Baseline~2 overtakes it from BLEU-3 onward.}
 \label{fig:ngram_bleu}
 \end{figure}
 
@@ -224,7 +224,7 @@ Baseline~1 outputs a jumble of individually correct French words with no grammat
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{figures/attention_heatmap.png}
-\caption{Cross-attention heatmap for our Seq2Seq model. The weights show how each generated French token attends to specific English source tokens, reflecting learned word alignment.}
+\caption{Cross-attention heatmap for our Seq2Seq model.}
 \label{fig:attention}
 \end{figure}
 
