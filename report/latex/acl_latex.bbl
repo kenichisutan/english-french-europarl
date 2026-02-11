@@ -1,0 +1,69 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Bahdanau et~al.(2015)Bahdanau, Cho, and Bengio}]{bahdanau2015neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2015.
+\newblock Neural machine translation by jointly learning to align and translate.
+\newblock In \emph{Proceedings of the 3rd International Conference on Learning Representations}.
+
+\bibitem[{Hutchins(2004)}]{hutchins2004georgetown}
+W.~John Hutchins. 2004.
+\newblock The {Georgetown-IBM} experiment demonstrated in {January} 1954.
+\newblock In Robert~E. Frederking and Kathryn~B. Taylor, editors, \emph{Machine Translation: From Real Users to Research (AMTA 2004)}, pages 102--114. Springer.
+
+\bibitem[{Junczys-Dowmunt et~al.(2018)Junczys-Dowmunt, Grundkiewicz, Dwojak, Hoang, Heafield, Neckermann, Seide, Germann, Fikri~Aji, Bogoychev, Martins, and Birch}]{junczys2018marian}
+Marcin Junczys-Dowmunt, Roman Grundkiewicz, Tomasz Dwojak, Hieu Hoang, Kenneth Heafield, Tom Neckermann, Frank Seide, Ulrich Germann, Alham Fikri~Aji, Nikolay Bogoychev, Andr{\'e} F.~T. Martins, and Alexandra Birch. 2018.
+\newblock Marian: Fast neural machine translation in {C++}.
+\newblock In \emph{Proceedings of ACL 2018, System Demonstrations}, pages 116--121.
+
+\bibitem[{Koehn(2005)}]{koehn2005europarl}
+Philipp Koehn. 2005.
+\newblock {Europarl}: A parallel corpus for statistical machine translation.
+\newblock In \emph{Proceedings of the 10th Machine Translation Summit}, pages 79--86.
+
+\bibitem[{Koehn et~al.(2003)Koehn, Och, and Marcu}]{koehn2003statistical}
+Philipp Koehn, Franz~Josef Och, and Daniel Marcu. 2003.
+\newblock Statistical phrase-based translation.
+\newblock In \emph{Proceedings of the 2003 Human Language Technology Conference of the North American Chapter of the ACL (HLT-NAACL)}, pages 127--133.
+
+\bibitem[{Liu et~al.(2020)Liu, Gu, Goyal, Li, Edunov, Ghazvininejad, Lewis, and Zettlemoyer}]{liu2020multilingual}
+Yinhan Liu, Jiatao Gu, Naman Goyal, Xian Li, Sergey Edunov, Marjan Ghazvininejad, Mike Lewis, and Luke Zettlemoyer. 2020.
+\newblock Multilingual denoising pre-training for neural machine translation.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 8:726--742.
+
+\bibitem[{Papineni et~al.(2002)Papineni, Roukos, Ward, and Zhu}]{papineni2002bleu}
+Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002.
+\newblock {BLEU}: a method for automatic evaluation of machine translation.
+\newblock In \emph{Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics}, pages 311--318. ACL.
+
+\bibitem[{Reimers and Gurevych(2020)}]{reimers2020making}
+Nils Reimers and Iryna Gurevych. 2020.
+\newblock Making monolingual sentence embeddings multilingual using knowledge distillation.
+\newblock In \emph{Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing}, pages 4512--4525.
+
+\bibitem[{Stahlberg(2020)}]{stahlberg2020neural}
+Felix Stahlberg. 2020.
+\newblock Neural machine translation: A review.
+\newblock \emph{Journal of Artificial Intelligence Research}, 69:343--418.
+
+\bibitem[{Sutskever et~al.(2014)Sutskever, Vinyals, and Le}]{sutskever2014sequence}
+Ilya Sutskever, Oriol Vinyals, and Quoc~V Le. 2014.
+\newblock Sequence to sequence learning with neural networks.
+\newblock In \emph{Advances in Neural Information Processing Systems}, volume~27.
+
+\bibitem[{Tiedemann and Thottingal(2020)}]{tiedemann2020opus}
+J{\"o}rg Tiedemann and Santhosh Thottingal. 2020.
+\newblock {OPUS-MT} -- building open translation services for the world.
+\newblock In \emph{Proceedings of the 22nd Annual Conference of the European Association for Machine Translation}, pages 479--480.
+
+\bibitem[{Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin. 2017.
+\newblock Attention is all you need.
+\newblock In \emph{Advances in Neural Information Processing Systems}, volume~30.
+
+\bibitem[{Wang et~al.(2020)Wang, Wei, Dong, Bao, Yang, and Zhou}]{wang2020minilm}
+Wenhui Wang, Furu Wei, Li~Dong, Hangbo Bao, Nan Yang, and Ming Zhou. 2020.
+\newblock {MiniLM}: Deep self-attention distillation for task-agnostic compression of pre-trained transformers.
+\newblock In \emph{Advances in Neural Information Processing Systems}, volume~33, pages 5776--5788.
+
+\end{thebibliography}

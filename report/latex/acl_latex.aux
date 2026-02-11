@@ -1,0 +1,73 @@
+\relax 
+\bibstyle{acl_natbib}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{hutchins2004georgetown}
+\citation{stahlberg2020neural}
+\citation{koehn2005europarl}
+\citation{tiedemann2020opus}
+\citation{papineni2002bleu}
+\citation{koehn2003statistical}
+\citation{sutskever2014sequence,bahdanau2015neural}
+\citation{vaswani2017attention}
+\citation{junczys2018marian}
+\citation{liu2020multilingual}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Statistical and Neural Machine Translation}{1}{subsection.2.1}\protected@file@percent }
+\citation{reimers2020making}
+\citation{wang2020minilm}
+\citation{koehn2005europarl}
+\citation{tiedemann2020opus}
+\citation{wang2020minilm,reimers2020making}
+\citation{junczys2018marian}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cross-Lingual Representations}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}The Europarl Corpus}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Data}{2}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Baseline 1: Word-for-Word Translation}{2}{subsection.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Baseline 2: Cross-Lingual Embedding Retrieval}{2}{subsection.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces PCA projection of cross-lingual sentence embeddings. English and French translations of the same sentence are mapped to nearby points in the shared space, illustrating the alignment used by Baseline~2.}}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:cross_lingual}{{1}{2}{PCA projection of cross-lingual sentence embeddings. English and French translations of the same sentence are mapped to nearby points in the shared space, illustrating the alignment used by Baseline~2}{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Our Model: Fine-Tuned Seq2Seq Transformer}{2}{subsection.3.4}\protected@file@percent }
+\citation{papineni2002bleu}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Hyperparameter Selection}{3}{subsubsection.3.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Grid search results. Best: lr=$5\text  {e-}5$, label smoothing$=0.0$.}}{3}{table.caption.2}\protected@file@percent }
+\newlabel{tab:gridsearch}{{1}{3}{Grid search results. Best: lr=$5\text {e-}5$, label smoothing$=0.0$}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Training Details}{3}{subsubsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Evaluation}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Metrics}{3}{subsection.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Training and validation loss over training steps. The training loss (blue) decreases steadily while the validation loss (red) converges, indicating stable fine-tuning.}}{3}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:training_loss}{{2}{3}{Training and validation loss over training steps. The training loss (blue) decreases steadily while the validation loss (red) converges, indicating stable fine-tuning}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Overall Results}{3}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of both baselines (BL\,1, BL\,2) and our model on 10,000 test examples.}}{3}{table.caption.4}\protected@file@percent }
+\newlabel{tab:comparison}{{2}{3}{Comparison of both baselines (BL\,1, BL\,2) and our model on 10,000 test examples}{table.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}N-gram Level Analysis}{3}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces N-gram BLEU breakdown (B-$n$ = BLEU-$n$).}}{3}{table.caption.5}\protected@file@percent }
+\newlabel{tab:ngram}{{3}{3}{N-gram BLEU breakdown (B-$n$ = BLEU-$n$)}{table.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces N-gram BLEU breakdown across all three models. Our model (blue) keeps high scores at all n-gram levels, while Baseline~1 drops sharply beyond unigrams and Baseline~2 remains low throughout.}}{4}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:ngram_bleu}{{3}{4}{N-gram BLEU breakdown across all three models. Our model (blue) keeps high scores at all n-gram levels, while Baseline~1 drops sharply beyond unigrams and Baseline~2 remains low throughout}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Qualitative Analysis}{4}{subsection.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cross-attention heatmap for our Seq2Seq model. The weights show how each generated French token attends to specific English source tokens, reflecting learned word alignment.}}{4}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:attention}{{4}{4}{Cross-attention heatmap for our Seq2Seq model. The weights show how each generated French token attends to specific English source tokens, reflecting learned word alignment}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{4}{section.5}\protected@file@percent }
+\bibdata{custom}
+\bibcite{bahdanau2015neural}{{1}{2015}{{Bahdanau et~al.}}{{Bahdanau, Cho, and Bengio}}}
+\bibcite{hutchins2004georgetown}{{2}{2004}{{Hutchins}}{{}}}
+\bibcite{junczys2018marian}{{3}{2018}{{Junczys-Dowmunt et~al.}}{{Junczys-Dowmunt, Grundkiewicz, Dwojak, Hoang, Heafield, Neckermann, Seide, Germann, Fikri~Aji, Bogoychev, Martins, and Birch}}}
+\bibcite{koehn2005europarl}{{4}{2005}{{Koehn}}{{}}}
+\bibcite{koehn2003statistical}{{5}{2003}{{Koehn et~al.}}{{Koehn, Och, and Marcu}}}
+\bibcite{liu2020multilingual}{{6}{2020}{{Liu et~al.}}{{Liu, Gu, Goyal, Li, Edunov, Ghazvininejad, Lewis, and Zettlemoyer}}}
+\bibcite{papineni2002bleu}{{7}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
+\bibcite{reimers2020making}{{8}{2020}{{Reimers and Gurevych}}{{}}}
+\bibcite{stahlberg2020neural}{{9}{2020}{{Stahlberg}}{{}}}
+\bibcite{sutskever2014sequence}{{10}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
+\bibcite{tiedemann2020opus}{{11}{2020}{{Tiedemann and Thottingal}}{{}}}
+\bibcite{vaswani2017attention}{{12}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{wang2020minilm}{{13}{2020}{{Wang et~al.}}{{Wang, Wei, Dong, Bao, Yang, and Zhou}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Average BLEU score by input sentence length. All models degrade on longer sentences, but our Seq2Seq model is the most robust.}}{5}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:bleu_by_length}{{5}{5}{Average BLEU score by input sentence length. All models degrade on longer sentences, but our Seq2Seq model is the most robust}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{5}{section.6}\protected@file@percent }
+\gdef \@abspage@last{6}

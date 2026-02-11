@@ -1,0 +1,258 @@
+\documentclass[11pt]{article}
+
+% Change "review" to "final" to generate the final (sometimes called camera-ready) version.
+\usepackage[final]{acl}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning}
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\title{English-to-French Machine Translation on the Europarl Corpus:\\A Comparative Study of Three Approaches}
+
+\author{
+Maxime Hakawaya \quad Juan Kenichi Sutan \quad Amine Outmani \\
+Universit\'{e} Paris-Saclay \\
+\texttt{\{maxime.hakawaya-ivanovic, juan-kenichi.sutan, amine.outmani\}} \\
+\texttt{@universite-paris-saclay.fr}
+}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Machine translation (MT) remains a central challenge in natural language processing. In this work, we compare three approaches to English-to-French translation, all trained and evaluated on the Europarl parallel corpus from the OPUS collection. We implement two baselines: (1)~a word-for-word model using a positional bilingual dictionary and (2)~a retrieval-based model that uses cross-lingual sentence embeddings. We then compare these against (3)~our own fine-tuned Seq2Seq transformer, built on top of a pretrained MarianMT model. All models are evaluated on a held-out test set using BLEU score, with both quantitative and qualitative analyses. Our fine-tuned model significantly outperforms both baselines, reaching an average BLEU score of 0.3224 versus 0.0378 and 0.0488 for the word-for-word and embedding baselines. An n-gram breakdown further shows that our model scores well at all n-gram levels, pointing to both accurate word choice and fluent phrasing.
+\end{abstract}
+
+\section{Introduction}
+
+Machine translation (MT) is one of the oldest problems in artificial intelligence \cite{hutchins2004georgetown}. Over the decades, the task of automatically translating text between languages has moved from rule-based systems to statistical methods and, more recently, to neural approaches \cite{stahlberg2020neural}.
+
+The Europarl corpus \cite{koehn2005europarl}, which contains proceedings of the European Parliament and is distributed as part of the OPUS collection \cite{tiedemann2020opus}, is a widely used benchmark in MT research. It offers large-scale, sentence-aligned parallel text across many European language pairs, which makes it a good fit for training and evaluating translation systems.
+
+In this study, we focus on the English-to-French direction. All three of our models are trained and evaluated on the same Europarl data. We compare two baseline systems against our own fine-tuned model:
+
+\begin{enumerate}
+    \item \textbf{Baseline 1 (Word-for-Word)}: A simple model that builds a bilingual dictionary from positionally aligned training pairs.
+    \item \textbf{Baseline 2 (Embedding Retrieval)}: A retrieval model that finds the most semantically similar French sentence from a candidate pool using cross-lingual embeddings.
+    \item \textbf{Our Model (Fine-Tuned Seq2Seq)}: A pretrained MarianMT encoder-decoder transformer that we fine-tune on the Europarl training data, with hyperparameters selected through grid search.
+\end{enumerate}
+
+This progression lets us see how each step, from simple lexical lookup to semantic retrieval to learned sequence generation, affects translation quality. We evaluate all models with BLEU score \cite{papineni2002bleu} and report both aggregate metrics and per-n-gram breakdowns.
+
+\section{Related Work}
+
+\subsection{Statistical and Neural Machine Translation}
+
+MT has gone through several major shifts over the years. Early statistical MT (SMT) systems like phrase-based models \cite{koehn2003statistical} relied on word and phrase alignment statistics from parallel corpora. These were eventually replaced by neural machine translation (NMT) approaches, which learn the translation task end-to-end with encoder-decoder architectures \cite{sutskever2014sequence, bahdanau2015neural}.
+
+The Transformer architecture \cite{vaswani2017attention} was a major breakthrough, allowing for highly parallel training and better handling of long-range dependencies through self-attention. Pretrained models like MarianMT \cite{junczys2018marian} and mBART \cite{liu2020multilingual} have since made high-quality NMT much more accessible through transfer learning and fine-tuning.
+
+\subsection{Cross-Lingual Representations}
+
+Cross-lingual sentence embeddings \cite{reimers2020making} project sentences from different languages into a shared vector space. Models like paraphrase-multilingual-MiniLM \cite{wang2020minilm} make it possible to compare meaning across languages without explicit translation. Although these representations are mainly intended for tasks like semantic similarity and retrieval, they can also be used for translation by returning the closest target-language sentence from a pool of candidates.
+
+\subsection{The Europarl Corpus}
+
+The Europarl corpus \cite{koehn2005europarl}, hosted within the OPUS collection \cite{tiedemann2020opus}, is one of the most commonly used resources in MT research. It contains proceedings of the European Parliament, aligned at the sentence level across up to 21 European languages. Its formal register and high alignment quality make it well suited for benchmarking translation systems. In our project, all three models (both baselines and our fine-tuned model) are trained and evaluated on the same English-French Europarl subset.
+
+\section{Methodology}
+
+\subsection{Data}
+
+We use the English-French portion of the Europarl parallel corpus. From the full dataset of roughly 2 million aligned sentence pairs, we load a subset of 100,000 pairs. These are split into training (80\%), validation (10\%), and test (10\%) sets using random sampling with a fixed seed for reproducibility.
+
+\subsection{Baseline 1: Word-for-Word Translation}
+
+Our first baseline builds a bilingual dictionary from the training data. For each English-French sentence pair, words are aligned based on their relative positions. Concretely, for an English word at position $i$ in a sentence of length $n_e$, the corresponding French position is estimated as $\lfloor (i / n_e) \cdot n_f \rfloor$, where $n_f$ is the French sentence length. To improve coverage, neighboring positions ($\pm 1$) are also considered with reduced weight.
+
+For each English word, the most frequently aligned French word is stored. At inference time, each English word is independently replaced by its dictionary entry, and unknown words are passed through unchanged.
+
+This approach is intentionally simple and serves as a lower bound. It can pick up some word-level correspondences but completely ignores word order, grammar, and context.
+
+\subsection{Baseline 2: Cross-Lingual Embedding Retrieval}
+
+Our second baseline uses pretrained multilingual sentence embeddings from the \texttt{paraphrase-multilingual-MiniLM-L12-v2} model \cite{wang2020minilm, reimers2020making}. During training, we embed all unique French sentences from the training set (up to 50,000 candidates) into a shared multilingual vector space.
+
+At test time, we embed the English input with the same model and return the French candidate with the highest cosine similarity. Figure~\ref{fig:cross_lingual} shows a PCA projection of this shared embedding space. While this approach does capture cross-lingual semantic similarity, it has an inherent limitation: it can only return a sentence that already exists in the candidate pool. If no close match is available, the retrieved sentence may be topically related but quite different from the expected reference.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{figures/cross_lingual_alignment.png}
+\caption{PCA projection of cross-lingual sentence embeddings. English and French translations of the same sentence are mapped to nearby points in the shared space, illustrating the alignment used by Baseline~2.}
+\label{fig:cross_lingual}
+\end{figure}
+
+\subsection{Our Model: Fine-Tuned Seq2Seq Transformer}
+
+For our main model, we start from the pretrained Helsinki-NLP/opus-mt-en-fr checkpoint \cite{junczys2018marian}, which is a MarianMT encoder-decoder Transformer already trained on a large collection of English-French parallel data. We then fine-tune this model on the same Europarl training data used by both baselines, selecting hyperparameters through grid search.
+
+It is worth noting that, unlike the two baselines which we built from scratch, this model leverages pretrained weights that already encode substantial translation knowledge. Our contribution here is the fine-tuning and hyperparameter selection on the Europarl domain.
+
+\subsubsection{Hyperparameter Selection}
+
+We run a grid search over the following hyperparameters:
+
+\begin{itemize}
+    \item Learning rate: $\{2 \times 10^{-5},\; 5 \times 10^{-5}\}$
+    \item Label smoothing: $\{0.0,\; 0.1\}$
+\end{itemize}
+
+Each configuration is trained for 1 epoch with a batch size of 32 and weight decay of 0.01, using mixed-precision (fp16) training on a GPU. We select the best configuration based on validation loss.
+
+The grid search results are shown in Table~\ref{tab:gridsearch}.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{ccc}
+\toprule
+\textbf{LR} & \textbf{Label Smooth.} & \textbf{Val Loss} \\
+\midrule
+$2\text{e-}5$ & 0.0 & 1.1218 \\
+$2\text{e-}5$ & 0.1 & 2.4475 \\
+$5\text{e-}5$ & 0.0 & \textbf{1.1207} \\
+$5\text{e-}5$ & 0.1 & 2.4483 \\
+\bottomrule
+\end{tabular}
+\caption{Grid search results. Best: lr=$5\text{e-}5$, label smoothing$=0.0$.}
+\label{tab:gridsearch}
+\end{table}
+
+The best configuration (learning rate $5 \times 10^{-5}$, no label smoothing) is used to train the final model for 3 epochs. Interestingly, label smoothing consistently hurt performance, roughly doubling the validation loss.
+
+\subsubsection{Training Details}
+
+The final model is trained with: batch size 16, learning rate $5 \times 10^{-5}$, weight decay 0.01, 500 warmup steps, max sequence length 128, and fp16 mixed precision. The best checkpoint by validation loss is saved for evaluation. Figure~\ref{fig:training_loss} shows the loss curves, which indicate stable convergence with no signs of overfitting.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{figures/training_loss.png}
+\caption{Training and validation loss over training steps. The training loss (blue) decreases steadily while the validation loss (red) converges, indicating stable fine-tuning.}
+\label{fig:training_loss}
+\end{figure}
+
+\section{Evaluation}
+
+\subsection{Metrics}
+
+We evaluate all three models using sentence-level BLEU score \cite{papineni2002bleu} with smoothing (method 1 from \texttt{nltk}). BLEU measures n-gram overlap between predicted and reference translations, and is a standard automatic metric for translation quality. We also report exact match rate.
+
+All models are evaluated on the same 10,000 test examples from the Europarl data.
+
+\subsection{Overall Results}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Metric} & \textbf{BL\,1} & \textbf{BL\,2} & \textbf{Ours} \\
+\midrule
+Avg.\ BLEU & 0.0378 & 0.0488 & \textbf{0.3224} \\
+Exact Match & 0.0005 & 0.0071 & 0.0351 \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of both baselines (BL\,1, BL\,2) and our model on 10,000 test examples.}
+\label{tab:comparison}
+\end{table}
+
+Our fine-tuned model significantly outperforms both baselines, with a BLEU score of 0.3224. This is roughly 8.5$\times$ higher than Baseline~1 and 6.6$\times$ higher than Baseline~2. The gap between the two baselines themselves is small (0.0378 vs.\ 0.0488), which suggests that semantic retrieval on its own is not enough for good translation.
+
+\subsection{N-gram Level Analysis}
+
+To better understand where each model succeeds or fails, we break down the BLEU score by n-gram level (see also Figure~\ref{fig:ngram_bleu}).
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{B-1} & \textbf{B-2} & \textbf{B-3} & \textbf{B-4} \\
+\midrule
+BL\,1 & 0.3233 & 0.0696 & 0.0211 & 0.0106 \\
+BL\,2 & 0.2124 & 0.0650 & 0.0375 & 0.0263 \\
+Ours & \textbf{0.5857} & \textbf{0.3884} & \textbf{0.2830} & \textbf{0.2110} \\
+\bottomrule
+\end{tabular}
+\caption{N-gram BLEU breakdown (B-$n$ = BLEU-$n$).}
+\label{tab:ngram}
+\end{table}
+
+Baseline~1 gets a reasonable BLEU-1 of 0.3233, which means it does produce many correct individual words. But its scores drop off quickly at higher n-gram levels (BLEU-4 = 0.0106), confirming that word-for-word translation gives no coherent phrasing.
+
+Baseline~2 actually has a \emph{lower} BLEU-1 than Baseline~1 (0.2124 vs.\ 0.3233). This is because it retrieves whole sentences that may be semantically close but use different vocabulary. It does slightly beat Baseline~1 at BLEU-3 and BLEU-4, since retrieved sentences can occasionally overlap structurally with the reference.
+
+Our model keeps high scores at all n-gram levels (BLEU-1 = 0.5857, BLEU-4 = 0.2110), showing both good word choice and fluent multi-word output.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{figures/ngram_bleu_breakdown.png}
+\caption{N-gram BLEU breakdown across all three models. Our model (blue) keeps high scores at all n-gram levels, while Baseline~1 drops sharply beyond unigrams and Baseline~2 remains low throughout.}
+\label{fig:ngram_bleu}
+\end{figure}
+
+\subsection{Qualitative Analysis}
+
+We also look at specific translation examples to get a sense of the qualitative differences between models.
+
+\begin{small}
+\noindent\textbf{Example:} \textit{``There are two political reasons why our committee and myself as its chairman must speak out about this issue.''}
+
+\medskip
+\noindent\textbf{Reference:} \textit{``Une double consid\'{e}ration politique conduit notre commission, ainsi que moi-m\^{e}me, en tant que Pr\'{e}sident de cette commission, \`{a} \'{e}lever la voix dans cette affaire.''}
+
+\medskip
+\noindent\textbf{Baseline 1:} \textit{``Il nous deux politique raisons pourquoi notre commission et moi comme de pr\'{e}sident doit de de de ce question''}
+
+\medskip
+\noindent\textbf{Baseline 2:} \textit{``Ce sujet a soulev\'{e} un d\'{e}bat au sein de la commission.''}
+
+\medskip
+\noindent\textbf{Ours:} \textit{``Il y a deux raisons politiques pour lesquelles notre commission et moi-m\^{e}me, en tant que pr\'{e}sidente, devons parler de cette question.''}
+\end{small}
+
+\medskip
+Baseline~1 outputs a jumble of individually correct French words with no grammatical structure. Baseline~2 picks a topically related but completely different sentence from the pool. Our model produces a fluent and accurate translation that closely matches the reference. Figure~\ref{fig:attention} shows the cross-attention weights for a sample translation, giving some insight into how the model aligns source and target tokens.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{figures/attention_heatmap.png}
+\caption{Cross-attention heatmap for our Seq2Seq model. The weights show how each generated French token attends to specific English source tokens, reflecting learned word alignment.}
+\label{fig:attention}
+\end{figure}
+
+\section{Discussion}
+
+The results clearly show the expected hierarchy: word-level lookup performs worst, semantic retrieval is slightly better, and the fine-tuned Seq2Seq model is far ahead of both. A few observations are worth highlighting.
+
+\textbf{Baseline~1 limitations.} The word-for-word model cannot capture word order, morphological agreement, or context. Its decent BLEU-1 shows it can get individual words right, but the lack of any multi-word coherence makes its output essentially unusable.
+
+\textbf{Baseline~2 limitations.} The embedding retrieval model can only return sentences from its candidate pool, so it can never produce a genuinely new translation. If the pool does not contain a close match, the output will be off. Its lower BLEU-1 compared to Baseline~1 also shows that sentence-level semantic similarity does not guarantee lexical overlap, which is what BLEU actually measures.
+
+\textbf{Benefits of fine-tuning.} Our model benefits from the pretrained MarianMT weights, which already encode a lot of translation knowledge from large-scale training. Fine-tuning on Europarl then adapts it to this specific domain. The key advantage over the baselines is that our model actually \emph{learns to generate} translations rather than relying on lookup or retrieval. We also found that label smoothing hurt performance in this setting, possibly because the Europarl domain is fairly homogeneous and the pretrained model already provides enough regularization on its own.
+
+\textbf{Sentence length effects.} As shown in Figure~\ref{fig:bleu_by_length}, all models perform worse on longer sentences. Our model is the most robust, holding up relatively well even for sentences of 40--50+ words, while Baseline~1 degrades the fastest.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\columnwidth]{figures/bleu_by_length.png}
+\caption{Average BLEU score by input sentence length. All models degrade on longer sentences, but our Seq2Seq model is the most robust.}
+\label{fig:bleu_by_length}
+\end{figure}
+
+\section{Conclusion}
+
+In this project, we compared three English-to-French machine translation approaches on the Europarl corpus: a word-for-word baseline, a cross-lingual embedding retrieval baseline, and a fine-tuned Seq2Seq transformer built on pretrained MarianMT weights. All three models were trained and evaluated on the same data. Our fine-tuned model achieved a BLEU score of 0.3224, far outperforming the two baselines (0.0378 and 0.0488).
+
+The progression from lexical to semantic to generative models gives a clear picture of how different levels of linguistic representation contribute to translation quality. In future work, it would be interesting to try larger training subsets, a broader hyperparameter search, or comparisons with newer model architectures.
+
+\bibliography{custom}
+
+\end{document}
