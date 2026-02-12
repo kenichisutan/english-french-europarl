@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex acl_latex"] 1770935447.24497 "acl_latex.aux" "acl_latex.bbl" "acl_latex" 1770935448.65215 0
+["bibtex acl_latex"] 1770935447.24497 "acl_latex.aux" "acl_latex.bbl" "acl_latex" 1770935929.87026 0
   "./acl_natbib.bst" 1770813850 45186 3d1af46d62cc9172ef6e42b56c1cd613 ""
   "./custom.bib" 1770893238.24171 2814 8118b4fe97a8387f44f9b383012c7f06 ""
-  "acl_latex.aux" 1770935448.3841 8171 786cff7aabb61c0681a45eab5456ce42 "pdflatex"
+  "acl_latex.aux" 1770935929.60919 8171 786cff7aabb61c0681a45eab5456ce42 "pdflatex"
   (generated)
   "acl_latex.bbl"
   "acl_latex.blg"
   (rewritten before read)
-["pdflatex"] 1770935447.36691 "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" "acl_latex.pdf" "acl_latex" 1770935448.6523 0
-  "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" 1770935445.442 19589 6b72afc748ff2e0c07c6e14b42caa083 ""
+["pdflatex"] 1770935928.57894 "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" "acl_latex.pdf" "acl_latex" 1770935929.87044 0
+  "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" 1770935928.33921 19600 4b7cdefff4b032ee3b17bd46741cde6d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc" 1558214095 7631 5169ff1acd97ff1c4ab83563c99f96f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -203,10 +203,10 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729676426 8221435 582dbe2c797b092ee814065cb50a17fa ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "acl.sty" 1770813850 11615 e2c027f483aa40e577ed34264c8b0655 ""
-  "acl_latex.aux" 1770935448.3841 8171 786cff7aabb61c0681a45eab5456ce42 "pdflatex"
+  "acl_latex.aux" 1770935929.60919 8171 786cff7aabb61c0681a45eab5456ce42 "pdflatex"
   "acl_latex.bbl" 1770935447.3638 2991 d8847b489195e98fbba71821d2b682c0 "bibtex acl_latex"
-  "acl_latex.out" 1770935448.38504 3509 a1642dd64310938c6966150bd24db6b0 "pdflatex"
-  "acl_latex.tex" 1770935445.442 19589 6b72afc748ff2e0c07c6e14b42caa083 ""
+  "acl_latex.out" 1770935929.61005 3509 a1642dd64310938c6966150bd24db6b0 "pdflatex"
+  "acl_latex.tex" 1770935928.33921 19600 4b7cdefff4b032ee3b17bd46741cde6d ""
   "figures/attention_heatmap.png" 1770819220.63445 43039 dd0dda8d906dc7268b2eed552f82bd48 ""
   "figures/bleu_by_length_baseline.png" 1770934142.92468 32695 b4f6e45e11e697f27a7f0e1c16a8f844 ""
   "figures/bleu_by_length_embeddings.png" 1770934142.92493 34005 26565266414bd9908d1341746dba39c3 ""
