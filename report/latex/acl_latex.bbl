@@ -1,10 +1,5 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
-
-\bibitem[{Hutchins(2004)}]{hutchins2004georgetown}
-W.~John Hutchins. 2004.
-\newblock The {Georgetown-IBM} experiment demonstrated in {January} 1954.
-\newblock In Robert~E. Frederking and Kathryn~B. Taylor, editors, \emph{Machine Translation: From Real Users to Research (AMTA 2004)}, pages 102--114. Springer.
 
 \bibitem[{Junczys-Dowmunt et~al.(2018)Junczys-Dowmunt, Grundkiewicz, Dwojak, Hoang, Heafield, Neckermann, Seide, Germann, Fikri~Aji, Bogoychev, Martins, and Birch}]{junczys2018marian}
 Marcin Junczys-Dowmunt, Roman Grundkiewicz, Tomasz Dwojak, Hieu Hoang, Kenneth Heafield, Tom Neckermann, Frank Seide, Ulrich Germann, Alham Fikri~Aji, Nikolay Bogoychev, Andr{\'e} F.~T. Martins, and Alexandra Birch. 2018.
@@ -50,10 +45,5 @@ J{\"o}rg Tiedemann. 2012.
 J{\"o}rg Tiedemann and Santhosh Thottingal. 2020.
 \newblock {OPUS-MT} -- building open translation services for the world.
 \newblock In \emph{Proceedings of the 22nd Annual Conference of the European Association for Machine Translation}, pages 479--480.
-
-\bibitem[{Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}]{vaswani2017attention}
-Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N Gomez, {\L}ukasz Kaiser, and Illia Polosukhin. 2017.
-\newblock Attention is all you need.
-\newblock In \emph{Advances in Neural Information Processing Systems}, volume~30.
 
 \end{thebibliography}

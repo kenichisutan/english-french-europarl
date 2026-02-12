@@ -32,7 +32,7 @@ Machine translation (MT) remains a central challenge in natural language process
 
 \section{Introduction}
 
-Machine translation (MT) is one of the oldest problems in artificial intelligence \cite{hutchins2004georgetown}. Over the decades, the task of automatically translating text between languages has moved from rule-based systems to statistical methods and, more recently, to neural approaches \cite{stahlberg2020neural}.
+Machine translation (MT) has seen rapid progress in recent years, driven largely by the shift from statistical methods to neural approaches \cite{stahlberg2020neural}. Modern neural MT systems can now produce fluent, high-quality translations, but understanding where and why different approaches succeed or fail remains an important question.
 
 The Europarl corpus \cite{koehn2005europarl}, which contains proceedings of the European Parliament and is distributed as part of the OPUS collection \cite{tiedemann2012opus}, is a widely used benchmark in MT research. It offers large-scale, sentence-aligned parallel text across many European language pairs, which makes it a good fit for training and evaluating translation systems.
 
@@ -52,7 +52,7 @@ This progression lets us see how each step, from simple lexical lookup to semant
 
 MT has gone through several major shifts over the years. Early statistical MT (SMT) systems like phrase-based models \cite{koehn2003statistical} relied on word and phrase alignment statistics from parallel corpora. These were eventually replaced by neural machine translation (NMT) approaches, which learn the translation task end-to-end with encoder-decoder architectures. The Sequence-to-Sequence (Seq2Seq) framework \cite{sutskever2014sequence} is one such approach, where an encoder maps the source sentence to a fixed-length representation and a decoder generates the target sentence from it.
 
-The Transformer architecture \cite{vaswani2017attention} was a major breakthrough, allowing for highly parallel training and better handling of long-range dependencies through self-attention. Pretrained models such as OPUS-MT \cite{tiedemann2020opusmt, junczys2018marian} have since made high-quality NMT much more accessible through transfer learning and fine-tuning.
+Pretrained Seq2Seq models such as OPUS-MT \cite{tiedemann2020opusmt, junczys2018marian} have since made high-quality NMT much more accessible through transfer learning and fine-tuning.
 
 \subsection{Cross-Lingual Representations}
 
@@ -142,7 +142,7 @@ The final model is trained with: batch size 16, learning rate $5 \times 10^{-5}$
 
 \subsection{Metrics}
 
-We evaluate all three models using sentence-level BLEU score \cite{papineni2002bleu} with smoothing (method 1 from \texttt{nltk}). BLEU measures n-gram overlap between predicted and reference translations, and is a standard automatic metric for translation quality. We also report exact match rate.
+We evaluate all three models using sentence-level BLEU score \cite{papineni2002bleu} with smoothing (method 1 from \texttt{nltk}). BLEU computes modified n-gram precision at each level ($n = 1$ to $4$), measuring how many n-grams in the predicted translation also appear in the reference. The final score is a geometric mean of these precisions, weighted by a brevity penalty that discourages overly short outputs. Scores range from 0 to 1, where higher values indicate greater overlap with the reference. We also report exact match rate.
 
 All models are evaluated on the same 10,000 test examples from the Europarl data.
 

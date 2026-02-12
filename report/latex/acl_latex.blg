@@ -9,44 +9,44 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: custom.bib
-You've used 11 entries,
+You've used 9 entries,
             3764 wiz_defined-function locations,
-            803 strings with 8185 characters,
-and the built_in function-call counts, 9276 in all, are:
-= -- 842
-> -- 388
-< -- 16
-+ -- 157
-- -- 117
-* -- 553
-:= -- 1308
-add.period$ -- 46
-call.type$ -- 11
-change.case$ -- 113
-chr.to.int$ -- 12
-cite$ -- 11
-duplicate$ -- 599
-empty$ -- 682
-format.name$ -- 146
-if$ -- 2066
+            790 strings with 7758 characters,
+and the built_in function-call counts, 7485 in all, are:
+= -- 692
+> -- 292
+< -- 13
++ -- 116
+- -- 88
+* -- 439
+:= -- 1054
+add.period$ -- 37
+call.type$ -- 9
+change.case$ -- 90
+chr.to.int$ -- 10
+cite$ -- 9
+duplicate$ -- 485
+empty$ -- 555
+format.name$ -- 112
+if$ -- 1675
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 127
-newline$ -- 59
-num.names$ -- 46
-pop$ -- 328
+missing$ -- 101
+newline$ -- 49
+num.names$ -- 36
+pop$ -- 260
 preamble$ -- 1
-purify$ -- 82
+purify$ -- 65
 quote$ -- 0
-skip$ -- 505
+skip$ -- 412
 stack$ -- 0
-substring$ -- 412
-swap$ -- 329
-text.length$ -- 10
+substring$ -- 356
+swap$ -- 266
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 99
+type$ -- 81
 warning$ -- 0
-while$ -- 60
+while$ -- 50
 width$ -- 0
-write$ -- 149
+write$ -- 122

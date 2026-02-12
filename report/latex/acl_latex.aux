@@ -3,14 +3,12 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\citation{hutchins2004georgetown}
 \citation{stahlberg2020neural}
 \citation{koehn2005europarl}
 \citation{tiedemann2012opus}
 \citation{papineni2002bleu}
 \citation{koehn2003statistical}
 \citation{sutskever2014sequence}
-\citation{vaswani2017attention}
 \citation{tiedemann2020opusmt,junczys2018marian}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{1}{section.2}\protected@file@percent }
@@ -42,7 +40,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Overall Results}{3}{subsection.4.2}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparison of both baselines (BL\,1, BL\,2) and our model on 10,000 test examples.}}{3}{table.caption.4}\protected@file@percent }
 \newlabel{tab:comparison}{{2}{3}{Comparison of both baselines (BL\,1, BL\,2) and our model on 10,000 test examples}{table.caption.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}N-gram Level Analysis}{3}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}N-gram Level Analysis}{4}{subsection.4.3}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces N-gram BLEU breakdown (B-$n$ = BLEU-$n$).}}{4}{table.caption.5}\protected@file@percent }
 \newlabel{tab:ngram}{{3}{4}{N-gram BLEU breakdown (B-$n$ = BLEU-$n$)}{table.caption.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces N-gram BLEU breakdown across all three models. Our model scores highest at every n-gram level. Baseline~1 outperforms Baseline~2 at BLEU-1 and BLEU-2, but Baseline~2 overtakes it from BLEU-3 onward.}}{4}{figure.caption.6}\protected@file@percent }
@@ -52,17 +50,15 @@
 \newlabel{fig:attention}{{4}{4}{Cross-attention heatmap for our Seq2Seq model}{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{4}{section.5}\protected@file@percent }
 \bibdata{custom}
-\bibcite{hutchins2004georgetown}{{1}{2004}{{Hutchins}}{{}}}
-\bibcite{junczys2018marian}{{2}{2018}{{Junczys-Dowmunt et~al.}}{{Junczys-Dowmunt, Grundkiewicz, Dwojak, Hoang, Heafield, Neckermann, Seide, Germann, Fikri~Aji, Bogoychev, Martins, and Birch}}}
-\bibcite{koehn2005europarl}{{3}{2005}{{Koehn}}{{}}}
-\bibcite{koehn2003statistical}{{4}{2003}{{Koehn et~al.}}{{Koehn, Och, and Marcu}}}
-\bibcite{papineni2002bleu}{{5}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
-\bibcite{reimers2020making}{{6}{2020}{{Reimers and Gurevych}}{{}}}
-\bibcite{stahlberg2020neural}{{7}{2020}{{Stahlberg}}{{}}}
-\bibcite{sutskever2014sequence}{{8}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
-\bibcite{tiedemann2012opus}{{9}{2012}{{Tiedemann}}{{}}}
-\bibcite{tiedemann2020opusmt}{{10}{2020}{{Tiedemann and Thottingal}}{{}}}
-\bibcite{vaswani2017attention}{{11}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{junczys2018marian}{{1}{2018}{{Junczys-Dowmunt et~al.}}{{Junczys-Dowmunt, Grundkiewicz, Dwojak, Hoang, Heafield, Neckermann, Seide, Germann, Fikri~Aji, Bogoychev, Martins, and Birch}}}
+\bibcite{koehn2005europarl}{{2}{2005}{{Koehn}}{{}}}
+\bibcite{koehn2003statistical}{{3}{2003}{{Koehn et~al.}}{{Koehn, Och, and Marcu}}}
+\bibcite{papineni2002bleu}{{4}{2002}{{Papineni et~al.}}{{Papineni, Roukos, Ward, and Zhu}}}
+\bibcite{reimers2020making}{{5}{2020}{{Reimers and Gurevych}}{{}}}
+\bibcite{stahlberg2020neural}{{6}{2020}{{Stahlberg}}{{}}}
+\bibcite{sutskever2014sequence}{{7}{2014}{{Sutskever et~al.}}{{Sutskever, Vinyals, and Le}}}
+\bibcite{tiedemann2012opus}{{8}{2012}{{Tiedemann}}{{}}}
+\bibcite{tiedemann2020opusmt}{{9}{2020}{{Tiedemann and Thottingal}}{{}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Average BLEU score by input sentence length. All models degrade on longer sentences, but our Seq2Seq model is the most robust.}}{5}{figure.caption.8}\protected@file@percent }
 \newlabel{fig:bleu_by_length}{{5}{5}{Average BLEU score by input sentence length. All models degrade on longer sentences, but our Seq2Seq model is the most robust}{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{5}{section.6}\protected@file@percent }
