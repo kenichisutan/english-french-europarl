@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  12 FEB 2026 23:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  12 FEB 2026 23:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -687,7 +687,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \T1/zi4/m/n/10.95 paraphrase-multilingual-MiniLM-L12-v2
  []
 
-<figures/cross_lingual_alignment.png, id=126, 668.4975pt x 506.6127pt>
+<figures/cross_lingual_alignment.png, id=138, 668.4975pt x 506.6127pt>
 File: figures/cross_lingual_alignment.png Graphic file (type png)
 <use figures/cross_lingual_alignment.png>
 Package pdftex.def Info: figures/cross_lingual_alignment.png  used on input line 88.
@@ -697,7 +697,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 10
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<figures/training_loss.png, id=148, 617.9085pt x 395.3169pt>
+<figures/training_loss.png, id=160, 617.9085pt x 395.3169pt>
 File: figures/training_loss.png Graphic file (type png)
 <use figures/training_loss.png>
 Package pdftex.def Info: figures/training_loss.png  used on input line 137.
@@ -706,38 +706,41 @@ Package pdftex.def Info: figures/training_loss.png  used on input line 137.
 Underfull \vbox (badness 1521) has occurred while \output is active []
 
  [3 <./figures/training_loss.png>]
-<figures/ngram_bleu_breakdown.png, id=166, 714.7503pt x 426.393pt>
+<figures/ngram_bleu_breakdown.png, id=178, 714.7503pt x 426.393pt>
 File: figures/ngram_bleu_breakdown.png Graphic file (type png)
 <use figures/ngram_bleu_breakdown.png>
 Package pdftex.def Info: figures/ngram_bleu_breakdown.png  used on input line 197.
 (pdftex.def)             Requested size: 219.08614pt x 130.69704pt.
-<figures/attention_heatmap.png, id=168, 639.5895pt x 570.933pt>
+<figures/attention_heatmap.png, id=180, 639.5895pt x 570.933pt>
 File: figures/attention_heatmap.png Graphic file (type png)
 <use figures/attention_heatmap.png>
-Package pdftex.def Info: figures/attention_heatmap.png  used on input line 227.
+Package pdftex.def Info: figures/attention_heatmap.png  used on input line 237.
 (pdftex.def)             Requested size: 219.08614pt x 195.5695pt.
- [4 <./figures/ngram_bleu_breakdown.png> <./figures/attention_heatmap.png>]
-<figures/bleu_by_length_baseline.png, id=180, 617.9085pt x 428.5611pt>
+ [4 <./figures/ngram_bleu_breakdown.png>]
+<figures/bleu_by_length_baseline.png, id=192, 617.9085pt x 428.5611pt>
 File: figures/bleu_by_length_baseline.png Graphic file (type png)
 <use figures/bleu_by_length_baseline.png>
-Package pdftex.def Info: figures/bleu_by_length_baseline.png  used on input line 248.
+Package pdftex.def Info: figures/bleu_by_length_baseline.png  used on input line 256.
 (pdftex.def)             Requested size: 186.22455pt x 129.15785pt.
-<figures/bleu_by_length_embeddings.png, id=181, 617.9085pt x 395.3169pt>
+<figures/bleu_by_length_embeddings.png, id=193, 617.9085pt x 395.3169pt>
 File: figures/bleu_by_length_embeddings.png Graphic file (type png)
 <use figures/bleu_by_length_embeddings.png>
-Package pdftex.def Info: figures/bleu_by_length_embeddings.png  used on input line 255.
+Package pdftex.def Info: figures/bleu_by_length_embeddings.png  used on input line 263.
 (pdftex.def)             Requested size: 186.22455pt x 119.13885pt.
-<figures/bleu_by_length_seq2seq.png, id=182, 617.9085pt x 395.3169pt>
+<figures/bleu_by_length_seq2seq.png, id=194, 617.9085pt x 395.3169pt>
 File: figures/bleu_by_length_seq2seq.png Graphic file (type png)
 <use figures/bleu_by_length_seq2seq.png>
-Package pdftex.def Info: figures/bleu_by_length_seq2seq.png  used on input line 262.
+Package pdftex.def Info: figures/bleu_by_length_seq2seq.png  used on input line 270.
 (pdftex.def)             Requested size: 186.22455pt x 119.13885pt.
  (./acl_latex.bbl
 Underfull \hbox (badness 2932) in paragraph at lines 5--8
 []\T1/ptm/m/n/10 (+20) Marcin Junczys-Dowmunt, Ro-man Grund-kiewicz,
  []
 
-[5 <./figures/bleu_by_length_baseline.png> <./figures/bleu_by_length_embeddings.png> <./figures/bleu_by_length_seq2seq.png>]) [6
+
+Underfull \vbox (badness 1371) has occurred while \output is active []
+
+ [5 <./figures/attention_heatmap.png> <./figures/bleu_by_length_baseline.png> <./figures/bleu_by_length_embeddings.png> <./figures/bleu_by_length_seq2seq.png>]) [6
 
 ] (./acl_latex.aux)
  ***********
@@ -745,21 +748,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `acl_latex.out' has not changed.
-(rerunfilecheck)             Checksum: C518310A3555D845FD4C4898C08CCE38;3029.
+(rerunfilecheck)             Checksum: A1642DD64310938C6966150BD24DB6B0;3509.
  ) 
 Here is how much of TeX's memory you used:
- 25349 strings out of 474116
- 469583 string characters out of 5743681
+ 25361 strings out of 474116
+ 469709 string characters out of 5743681
  1946187 words of memory out of 5000000
- 46947 multiletter control sequences out of 15000+600000
- 616431 words of font info for 278 fonts, out of 8000000 for 9000
+ 46950 multiletter control sequences out of 15000+600000
+ 616646 words of font info for 282 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,107p,1098b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl_latex.pdf (6 pages, 397244 bytes).
+Output written on acl_latex.pdf (6 pages, 397907 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 211 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 60616 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 60640 words of extra memory for PDF output out of 61914 (max. 10000000)
 

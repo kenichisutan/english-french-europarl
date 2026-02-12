@@ -199,9 +199,11 @@ Our model keeps high scores at all n-gram levels (BLEU-1 = 0.5857, BLEU-4 = 0.21
 \label{fig:ngram_bleu}
 \end{figure}
 
-\subsection{Qualitative Analysis}
+\section{Error Analysis}
 
-We also look at specific translation examples to get a sense of the qualitative differences between models.
+We examine translation errors at three levels: qualitative examples, systematic failure modes, and the effect of sentence length.
+
+\subsection{Qualitative Examples}
 
 \begin{small}
 \noindent\textbf{Example:} \textit{``There are two political reasons why our committee and myself as its chairman must speak out about this issue.''}
@@ -220,7 +222,15 @@ We also look at specific translation examples to get a sense of the qualitative 
 \end{small}
 
 \medskip
-Baseline~1 outputs a jumble of individually correct French words with no grammatical structure. Baseline~2 picks a topically related but completely different sentence from the pool. Our model produces a fluent and accurate translation that closely matches the reference. Figure~\ref{fig:attention} shows the cross-attention weights for a sample translation, giving some insight into how the model aligns source and target tokens.
+Baseline~1 outputs a jumble of individually correct French words with no grammatical structure: articles are repeated (``de de de'') and word order follows the English source rather than French syntax. Baseline~2 retrieves a topically related but completely different sentence, losing the original meaning. Our model produces a fluent translation that closely matches the reference, though it introduces a minor gender error (``pr\'{e}sidente'' instead of ``Pr\'{e}sident'').
+
+\subsection{Systematic Failure Modes}
+
+\noindent\textbf{Baseline~1.} The word-for-word model cannot capture word order, morphological agreement, or context. Its decent BLEU-1 (0.3233) shows it gets individual words right, but the steep drop at higher n-gram levels (BLEU-4 = 0.0106) confirms it produces no coherent phrasing.
+
+\noindent\textbf{Baseline~2.} The embedding retrieval model can only return sentences from its candidate pool, so it can never produce a genuinely new translation. Its lower BLEU-1 compared to Baseline~1 (0.2124 vs.\ 0.3233) shows that sentence-level semantic similarity does not guarantee lexical overlap.
+
+\noindent\textbf{Our model.} Despite its strong overall scores, our model achieves an exact match rate of only 3.51\%. This is partly expected, since valid translations are not unique and differences in phrasing do not necessarily indicate errors. Figure~\ref{fig:attention} shows the cross-attention weights for a sample translation; misaligned attention patterns can signal errors in longer or more complex sentences.
 
 \begin{figure}[ht]
 \centering
@@ -229,17 +239,15 @@ Baseline~1 outputs a jumble of individually correct French words with no grammat
 \label{fig:attention}
 \end{figure}
 
+\subsection{Sentence Length Effects}
+
+As shown in Figure~\ref{fig:bleu_by_length}, all models perform worse on longer sentences. Our model is the most robust, while Baseline~1 degrades the fastest. This is consistent with the failure modes above: positional alignment noise accumulates with length for Baseline~1, while the finite candidate pool becomes less likely to contain a close match for longer inputs in Baseline~2.
+
 \section{Discussion}
 
-The results clearly show the expected hierarchy: word-level lookup performs worst, semantic retrieval is slightly better, and the fine-tuned Seq2Seq model is far ahead of both. A few observations are worth highlighting.
+The results clearly show the expected hierarchy: word-level lookup performs worst, semantic retrieval is slightly better, and the fine-tuned Seq2Seq model is far ahead of both.
 
-\textbf{Baseline~1 limitations.} The word-for-word model cannot capture word order, morphological agreement, or context. Its decent BLEU-1 shows it can get individual words right, but the lack of any multi-word coherence makes its output essentially unusable.
-
-\textbf{Baseline~2 limitations.} The embedding retrieval model can only return sentences from its candidate pool, so it can never produce a genuinely new translation. If the pool does not contain a close match, the output will be off. Its lower BLEU-1 compared to Baseline~1 also shows that sentence-level semantic similarity does not guarantee lexical overlap, which is what BLEU actually measures.
-
-\textbf{Benefits of fine-tuning.} Our model benefits from the pretrained MarianMT weights, which already encode a lot of translation knowledge from large-scale training. Fine-tuning on Europarl then adapts it to this specific domain. The key advantage over the baselines is that our model actually \emph{learns to generate} translations rather than relying on lookup or retrieval. We also found that label smoothing hurt performance in this setting, possibly because the Europarl domain is fairly homogeneous and the pretrained model already provides enough regularization on its own.
-
-\textbf{Sentence length effects.} As shown in Figure~\ref{fig:bleu_by_length}, all models perform worse on longer sentences. Our model is the most robust, holding up relatively well even for sentences of 40--50+ words, while Baseline~2 degrades the fastest.
+Our model benefits from the pretrained MarianMT weights, which already encode substantial translation knowledge from large-scale training. Fine-tuning on Europarl then adapts it to this specific domain. The key advantage over the baselines is that our model actually \emph{learns to generate} translations rather than relying on lookup or retrieval. We also found that label smoothing hurt performance in this setting, possibly because the Europarl domain is fairly homogeneous and the pretrained model already provides enough regularization on its own.
 
 \begin{figure}[ht]
 \centering
