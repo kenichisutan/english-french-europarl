@@ -241,7 +241,7 @@ Baseline~1 outputs a jumble of individually correct French words with no grammat
 
 \subsection{Sentence Length Effects}
 
-As shown in Figure~\ref{fig:bleu_by_length}, all models perform worse on longer sentences. Our model is the most robust, while Baseline~1 degrades the fastest. This is consistent with the failure modes above: positional alignment noise accumulates with length for Baseline~1, while the finite candidate pool becomes less likely to contain a close match for longer inputs in Baseline~2.
+As shown in Figure~\ref{fig:bleu_by_length}, all models perform worse on longer sentences. Our model is the most robust, while Baseline~2 degrades the fastest. This is consistent with its failure mode: the finite candidate pool becomes less likely to contain a close match for longer inputs, making retrieval increasingly unreliable as sentence length grows.
 
 \section{Discussion}
 

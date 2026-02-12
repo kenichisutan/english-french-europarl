@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  12 FEB 2026 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  12 FEB 2026 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -737,10 +737,7 @@ Underfull \hbox (badness 2932) in paragraph at lines 5--8
 []\T1/ptm/m/n/10 (+20) Marcin Junczys-Dowmunt, Ro-man Grund-kiewicz,
  []
 
-
-Underfull \vbox (badness 1371) has occurred while \output is active []
-
- [5 <./figures/attention_heatmap.png> <./figures/bleu_by_length_baseline.png> <./figures/bleu_by_length_embeddings.png> <./figures/bleu_by_length_seq2seq.png>]) [6
+[5 <./figures/attention_heatmap.png> <./figures/bleu_by_length_baseline.png> <./figures/bleu_by_length_embeddings.png> <./figures/bleu_by_length_seq2seq.png>]) [6
 
 ] (./acl_latex.aux)
  ***********
@@ -751,15 +748,15 @@ Package rerunfilecheck Info: File `acl_latex.out' has not changed.
 (rerunfilecheck)             Checksum: A1642DD64310938C6966150BD24DB6B0;3509.
  ) 
 Here is how much of TeX's memory you used:
- 25361 strings out of 474116
- 469709 string characters out of 5743681
+ 25364 strings out of 474116
+ 469736 string characters out of 5743681
  1946187 words of memory out of 5000000
  46950 multiletter control sequences out of 15000+600000
- 616646 words of font info for 282 fonts, out of 8000000 for 9000
+ 616776 words of font info for 284 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,107p,1098b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl_latex.pdf (6 pages, 397907 bytes).
+Output written on acl_latex.pdf (6 pages, 397940 bytes).
 PDF statistics:
  271 PDF objects out of 1000 (max. 8388607)
  224 compressed objects within 3 object streams
