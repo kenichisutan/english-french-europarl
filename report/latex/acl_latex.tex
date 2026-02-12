@@ -34,7 +34,7 @@ Machine translation (MT) remains a central challenge in natural language process
 
 Machine translation (MT) is one of the oldest problems in artificial intelligence \cite{hutchins2004georgetown}. Over the decades, the task of automatically translating text between languages has moved from rule-based systems to statistical methods and, more recently, to neural approaches \cite{stahlberg2020neural}.
 
-The Europarl corpus \cite{koehn2005europarl}, which contains proceedings of the European Parliament and is distributed as part of the OPUS collection \cite{tiedemann2020opus}, is a widely used benchmark in MT research. It offers large-scale, sentence-aligned parallel text across many European language pairs, which makes it a good fit for training and evaluating translation systems.
+The Europarl corpus \cite{koehn2005europarl}, which contains proceedings of the European Parliament and is distributed as part of the OPUS collection \cite{tiedemann2012opus}, is a widely used benchmark in MT research. It offers large-scale, sentence-aligned parallel text across many European language pairs, which makes it a good fit for training and evaluating translation systems.
 
 In this study, we focus on the English-to-French direction. All three of our models are trained and evaluated on the same Europarl data. We compare two baseline systems against our own fine-tuned model:
 
@@ -50,17 +50,17 @@ This progression lets us see how each step, from simple lexical lookup to semant
 
 \subsection{Statistical and Neural Machine Translation}
 
-MT has gone through several major shifts over the years. Early statistical MT (SMT) systems like phrase-based models \cite{koehn2003statistical} relied on word and phrase alignment statistics from parallel corpora. These were eventually replaced by neural machine translation (NMT) approaches, which learn the translation task end-to-end with encoder-decoder architectures \cite{sutskever2014sequence, bahdanau2015neural}.
+MT has gone through several major shifts over the years. Early statistical MT (SMT) systems like phrase-based models \cite{koehn2003statistical} relied on word and phrase alignment statistics from parallel corpora. These were eventually replaced by neural machine translation (NMT) approaches, which learn the translation task end-to-end with encoder-decoder architectures. The Sequence-to-Sequence (Seq2Seq) framework \cite{sutskever2014sequence} is one such approach, where an encoder maps the source sentence to a fixed-length representation and a decoder generates the target sentence from it.
 
-The Transformer architecture \cite{vaswani2017attention} was a major breakthrough, allowing for highly parallel training and better handling of long-range dependencies through self-attention. Pretrained models like MarianMT \cite{junczys2018marian} and mBART \cite{liu2020multilingual} have since made high-quality NMT much more accessible through transfer learning and fine-tuning.
+The Transformer architecture \cite{vaswani2017attention} was a major breakthrough, allowing for highly parallel training and better handling of long-range dependencies through self-attention. Pretrained models such as OPUS-MT \cite{tiedemann2020opusmt, junczys2018marian} have since made high-quality NMT much more accessible through transfer learning and fine-tuning.
 
 \subsection{Cross-Lingual Representations}
 
-Cross-lingual sentence embeddings \cite{reimers2020making} project sentences from different languages into a shared vector space. Models like paraphrase-multilingual-MiniLM \cite{wang2020minilm} make it possible to compare meaning across languages without explicit translation. Although these representations are mainly intended for tasks like semantic similarity and retrieval, they can also be used for translation by returning the closest target-language sentence from a pool of candidates.
+Cross-lingual sentence embeddings project sentences from different languages into a shared vector space. Models like paraphrase-multilingual-MiniLM \cite{reimers2020making} make it possible to compare meaning across languages without explicit translation. Although these representations are mainly intended for tasks like semantic similarity and retrieval, they can also be used for translation by returning the closest target-language sentence from a pool of candidates.
 
 \subsection{The Europarl Corpus}
 
-The Europarl corpus \cite{koehn2005europarl}, hosted within the OPUS collection \cite{tiedemann2020opus}, is one of the most commonly used resources in MT research. It contains proceedings of the European Parliament, aligned at the sentence level across up to 21 European languages. Its formal register and high alignment quality make it well suited for benchmarking translation systems. In our project, all three models (both baselines and our fine-tuned model) are trained and evaluated on the same English-French Europarl subset.
+The Europarl corpus \cite{koehn2005europarl}, hosted within the OPUS collection \cite{tiedemann2012opus}, is one of the most commonly used resources in MT research. It contains proceedings of the European Parliament, aligned at the sentence level across up to 21 European languages. Its formal register and high alignment quality make it well suited for benchmarking translation systems. In our project, all three models (both baselines and our fine-tuned model) are trained and evaluated on the same English-French Europarl subset.
 
 \section{Methodology}
 
@@ -78,7 +78,7 @@ This approach is intentionally simple and serves as a lower bound. It can pick u
 
 \subsection{Baseline 2: Cross-Lingual Embedding Retrieval}
 
-Our second baseline uses pretrained multilingual sentence embeddings from the \texttt{paraphrase-multilingual-MiniLM-L12-v2} model \cite{wang2020minilm, reimers2020making}. During training, we embed all unique French sentences from the training set (up to 50,000 candidates) into a shared multilingual vector space.
+Our second baseline uses pretrained multilingual sentence embeddings from the \texttt{paraphrase-multilingual-MiniLM-L12-v2} model \cite{reimers2020making}. During training, we embed all unique French sentences from the training set (up to 50,000 candidates) into a shared multilingual vector space.
 
 At test time, we embed the English input with the same model and return the French candidate with the highest cosine similarity. Figure~\ref{fig:cross_lingual} shows a PCA projection of this shared embedding space. While this approach does capture cross-lingual semantic similarity, it has an inherent limitation: it can only return a sentence that already exists in the candidate pool. If no close match is available, the retrieved sentence may be topically related but quite different from the expected reference.
 
@@ -91,7 +91,7 @@ At test time, we embed the English input with the same model and return the Fren
 
 \subsection{Our Model: Fine-Tuned Seq2Seq Transformer}
 
-For our main model, we start from the pretrained Helsinki-NLP/opus-mt-en-fr checkpoint \cite{junczys2018marian}, which is a MarianMT encoder-decoder Transformer already trained on a large collection of English-French parallel data. We then fine-tune this model on the same Europarl training data used by both baselines, selecting hyperparameters through grid search.
+For our main model, we start from the pretrained Helsinki-NLP/opus-mt-en-fr checkpoint \cite{junczys2018marian, tiedemann2020opusmt}, which is a MarianMT encoder-decoder Transformer already trained on a large collection of English-French parallel data. We then fine-tune this model on the same Europarl training data used by both baselines, selecting hyperparameters through grid search.
 
 It is worth noting that, unlike the two baselines which we built from scratch, this model leverages pretrained weights that already encode substantial translation knowledge. Our contribution here is the fine-tuning and hyperparameter selection on the Europarl domain.
 

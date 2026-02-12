@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  11 FEB 2026 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  12 FEB 2026 11:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -681,7 +681,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 \T1/zi4/m/n/10.95 paraphrase-multilingual-MiniLM-L12-v2
  []
 
-<figures/cross_lingual_alignment.png, id=141, 668.4975pt x 506.6127pt>
+<figures/cross_lingual_alignment.png, id=132, 668.4975pt x 506.6127pt>
 File: figures/cross_lingual_alignment.png Graphic file (type png)
 <use figures/cross_lingual_alignment.png>
 Package pdftex.def Info: figures/cross_lingual_alignment.png  used on input line 87.
@@ -691,7 +691,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 10
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<figures/training_loss.png, id=165, 617.9085pt x 395.3169pt>
+<figures/training_loss.png, id=154, 617.9085pt x 395.3169pt>
 File: figures/training_loss.png Graphic file (type png)
 <use figures/training_loss.png>
 Package pdftex.def Info: figures/training_loss.png  used on input line 136.
@@ -701,30 +701,28 @@ Package pdftex.def Info: figures/training_loss.png  used on input line 136.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./figures/training_loss.png>]
-<figures/ngram_bleu_breakdown.png, id=181, 714.7503pt x 426.393pt>
+<figures/ngram_bleu_breakdown.png, id=173, 714.7503pt x 426.393pt>
 File: figures/ngram_bleu_breakdown.png Graphic file (type png)
 <use figures/ngram_bleu_breakdown.png>
 Package pdftex.def Info: figures/ngram_bleu_breakdown.png  used on input line 196.
 (pdftex.def)             Requested size: 219.08614pt x 130.69704pt.
-<figures/attention_heatmap.png, id=183, 639.5895pt x 570.933pt>
+<figures/attention_heatmap.png, id=175, 639.5895pt x 570.933pt>
 File: figures/attention_heatmap.png Graphic file (type png)
 <use figures/attention_heatmap.png>
 Package pdftex.def Info: figures/attention_heatmap.png  used on input line 226.
 (pdftex.def)             Requested size: 219.08614pt x 195.5695pt.
  [4 <./figures/ngram_bleu_breakdown.png> <./figures/attention_heatmap.png>]
-<figures/bleu_by_length.png, id=194, 617.9085pt x 428.5611pt>
+<figures/bleu_by_length.png, id=186, 617.9085pt x 428.5611pt>
 File: figures/bleu_by_length.png Graphic file (type png)
 <use figures/bleu_by_length.png>
 Package pdftex.def Info: figures/bleu_by_length.png  used on input line 245.
 (pdftex.def)             Requested size: 219.08614pt x 151.94734pt.
  (./acl_latex.bbl
-Underfull \hbox (badness 2932) in paragraph at lines 15--18
+Underfull \hbox (badness 2932) in paragraph at lines 10--13
 []\T1/ptm/m/n/10 (+20) Marcin Junczys-Dowmunt, Ro-man Grund-kiewicz,
  []
 
-[5 <./figures/bleu_by_length.png>]) [6
-
-] (./acl_latex.aux)
+) [5 <./figures/bleu_by_length.png>] (./acl_latex.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -733,18 +731,18 @@ Package rerunfilecheck Info: File `acl_latex.out' has not changed.
 (rerunfilecheck)             Checksum: C518310A3555D845FD4C4898C08CCE38;3029.
  ) 
 Here is how much of TeX's memory you used:
- 25252 strings out of 474116
- 467196 string characters out of 5743681
- 1946187 words of memory out of 5000000
- 46821 multiletter control sequences out of 15000+600000
- 617981 words of font info for 296 fonts, out of 8000000 for 9000
+ 25222 strings out of 474116
+ 466812 string characters out of 5743681
+ 1947187 words of memory out of 5000000
+ 46815 multiletter control sequences out of 15000+600000
+ 616786 words of font info for 282 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,107p,1098b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,1098b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl_latex.pdf (6 pages, 346718 bytes).
+Output written on acl_latex.pdf (5 pages, 345546 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
+ 256 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
  60606 words of extra memory for PDF output out of 61914 (max. 10000000)
 

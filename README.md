@@ -29,6 +29,18 @@ To set up the data, download the Europarl v8 bilingual TMX file (`en-fr.tmx`) fr
 └── report/                     # ACL-style project report (LaTeX)
 ```
 
+## Citation
+
+If you use the Europarl data from OPUS, please cite:
+
+> J. Tiedemann, 2012, *Parallel Data, Tools and Interfaces in OPUS*. In Proceedings of the 8th International Conference on Language Resources and Evaluation (LREC 2012).
+
+The Europarl corpus itself was originally compiled by Philipp Koehn:
+
+> P. Koehn, 2005, *Europarl: A Parallel Corpus for Statistical Machine Translation*. In Proceedings of the 10th Machine Translation Summit.
+
+More information: [OPUS Europarl](https://opus.nlpl.eu/datasets/Europarl) | [statmt.org/europarl](http://www.statmt.org/europarl/)
+
 ## Authors
 
 Maxime Hayakawa, Juan Kenichi Sutan, Amine Outmani
