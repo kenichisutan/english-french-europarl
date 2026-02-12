@@ -12,6 +12,7 @@
 \usepackage{microtype}
 \usepackage{inconsolata}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{booktabs}
 
@@ -238,12 +239,31 @@ The results clearly show the expected hierarchy: word-level lookup performs wors
 
 \textbf{Benefits of fine-tuning.} Our model benefits from the pretrained MarianMT weights, which already encode a lot of translation knowledge from large-scale training. Fine-tuning on Europarl then adapts it to this specific domain. The key advantage over the baselines is that our model actually \emph{learns to generate} translations rather than relying on lookup or retrieval. We also found that label smoothing hurt performance in this setting, possibly because the Europarl domain is fairly homogeneous and the pretrained model already provides enough regularization on its own.
 
-\textbf{Sentence length effects.} As shown in Figure~\ref{fig:bleu_by_length}, all models perform worse on longer sentences. Our model is the most robust, holding up relatively well even for sentences of 40--50+ words, while Baseline~1 degrades the fastest.
+\textbf{Sentence length effects.} As shown in Figure~\ref{fig:bleu_by_length}, all models perform worse on longer sentences. Our model is the most robust, holding up relatively well even for sentences of 40--50+ words, while Baseline~2 degrades the fastest.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=\columnwidth]{figures/bleu_by_length.png}
-\caption{Average BLEU score by input sentence length. All models degrade on longer sentences, but our Seq2Seq model is the most robust.}
+\begin{subfigure}[t]{\columnwidth}
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/bleu_by_length_baseline.png}
+    \caption{Baseline~1}
+    \label{fig:bleu_len_bl1}
+\end{subfigure}
+
+\begin{subfigure}[t]{\columnwidth}
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/bleu_by_length_embeddings.png}
+    \caption{Baseline~2}
+    \label{fig:bleu_len_bl2}
+\end{subfigure}
+
+\begin{subfigure}[t]{\columnwidth}
+    \centering
+    \includegraphics[width=0.85\linewidth]{figures/bleu_by_length_seq2seq.png}
+    \caption{Ours}
+    \label{fig:bleu_len_ours}
+\end{subfigure}
+\caption{Average BLEU score by input sentence length for each model. All models degrade on longer sentences, but our Seq2Seq model is the most robust, while Baseline~1 degrades the fastest.}
 \label{fig:bleu_by_length}
 \end{figure}
 

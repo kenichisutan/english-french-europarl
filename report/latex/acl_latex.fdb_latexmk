@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex acl_latex"] 1770893419.82367 "acl_latex.aux" "acl_latex.bbl" "acl_latex" 1770893421.26554 0
+["bibtex acl_latex"] 1770934216.04632 "acl_latex.aux" "acl_latex.bbl" "acl_latex" 1770934310.3541 0
   "./acl_natbib.bst" 1770813850 45186 3d1af46d62cc9172ef6e42b56c1cd613 ""
   "./custom.bib" 1770893238.24171 2814 8118b4fe97a8387f44f9b383012c7f06 ""
-  "acl_latex.aux" 1770893420.97453 7278 de59b3435a943e33b3b4fe5ba5df413b "pdflatex"
+  "acl_latex.aux" 1770934310.11101 7799 fb44ae54692c4047d8fe210b7f1cb4db "pdflatex"
   (generated)
   "acl_latex.bbl"
   "acl_latex.blg"
   (rewritten before read)
-["pdflatex"] 1770893419.93316 "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" "acl_latex.pdf" "acl_latex" 1770893421.26576 0
-  "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" 1770893418.17047 18425 dcce2fc47b966ddf238229b4fcf1c4b7 ""
+["pdflatex"] 1770934309.01576 "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" "acl_latex.pdf" "acl_latex" 1770934310.35427 0
+  "/Users/kenichisutan/Documents/Paris-Saclay/NLP/Project/english-french-europarl/report/latex/acl_latex.tex" 1770934308.7529 19036 ee2a275aa1523336319eb4a85b49d8bb ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc" 1558214095 7631 5169ff1acd97ff1c4ab83563c99f96f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -148,6 +148,7 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty" 1579038678 6078 f1cb470c9199e7110a27851508ed7a5c ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
+  "/usr/local/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty" 1690576852 12494 0c0cdb824278a4d51cefeb2e79901315 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
@@ -202,12 +203,14 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1729676426 8221435 582dbe2c797b092ee814065cb50a17fa ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "acl.sty" 1770813850 11615 e2c027f483aa40e577ed34264c8b0655 ""
-  "acl_latex.aux" 1770893420.97453 7278 de59b3435a943e33b3b4fe5ba5df413b "pdflatex"
-  "acl_latex.bbl" 1770893419.93028 2991 d8847b489195e98fbba71821d2b682c0 "bibtex acl_latex"
-  "acl_latex.out" 1770893420.97574 3029 c518310a3555d845fd4c4898c08cce38 "pdflatex"
-  "acl_latex.tex" 1770893418.17047 18425 dcce2fc47b966ddf238229b4fcf1c4b7 ""
+  "acl_latex.aux" 1770934310.11101 7799 fb44ae54692c4047d8fe210b7f1cb4db "pdflatex"
+  "acl_latex.bbl" 1770934216.15477 2991 d8847b489195e98fbba71821d2b682c0 "bibtex acl_latex"
+  "acl_latex.out" 1770934310.11188 3029 c518310a3555d845fd4c4898c08cce38 "pdflatex"
+  "acl_latex.tex" 1770934308.7529 19036 ee2a275aa1523336319eb4a85b49d8bb ""
   "figures/attention_heatmap.png" 1770819220.63445 43039 dd0dda8d906dc7268b2eed552f82bd48 ""
-  "figures/bleu_by_length.png" 1770819220.63339 32695 b4f6e45e11e697f27a7f0e1c16a8f844 ""
+  "figures/bleu_by_length_baseline.png" 1770934142.92468 32695 b4f6e45e11e697f27a7f0e1c16a8f844 ""
+  "figures/bleu_by_length_embeddings.png" 1770934142.92493 34005 26565266414bd9908d1341746dba39c3 ""
+  "figures/bleu_by_length_seq2seq.png" 1770934142.92517 36739 8effff7951c58072b1220ec9fa87c253 ""
   "figures/cross_lingual_alignment.png" 1770819220.63381 62771 ba705d45436d2e29fbe807318b8c1e82 ""
   "figures/ngram_bleu_breakdown.png" 1770819220.63415 45816 7867f5c1993803d7ea2c855ed436b125 ""
   "figures/training_loss.png" 1770819220.63301 62327 033084094d973b80965c6b0e5b8208dd ""

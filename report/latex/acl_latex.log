@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  12 FEB 2026 11:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  12 FEB 2026 23:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -448,6 +448,12 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \zifour@ocount=\count304
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count305
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count306
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip55
@@ -465,14 +471,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count305
+\inf@bad=\count307
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count306
-\leftroot@=\count307
+\uproot@=\count308
+\leftroot@=\count309
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count308
-\DOTSCASE@=\count309
+\classnum@=\count310
+\DOTSCASE@=\count311
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -485,20 +491,20 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen276
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count310
+\macc@depth=\count312
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count311
+\c@MaxMatrixCols=\count313
 \dotsspace@=\muskip17
-\c@parentequation=\count312
-\dspbrk@lvl=\count313
+\c@parentequation=\count314
+\dspbrk@lvl=\count315
 \tag@help=\toks38
-\row@=\count314
-\column@=\count315
-\maxfields@=\count316
+\row@=\count316
+\column@=\count317
+\maxfields@=\count318
 \andhelp@=\toks39
 \eqnshift@=\dimen277
 \alignsep@=\dimen278
@@ -524,50 +530,50 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen290
 \cmidrulekern=\dimen291
 \defaultaddspace=\dimen292
-\@cmidla=\count317
-\@cmidlb=\count318
+\@cmidla=\count319
+\@cmidlb=\count320
 \@aboverulesep=\dimen293
 \@belowrulesep=\dimen294
-\@thisruleclass=\count319
-\@lastruleclass=\count320
+\@thisruleclass=\count321
+\@lastruleclass=\count322
 \@thisrulewidth=\dimen295
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count321
+\l__color_backend_stack_int=\count323
 \l__pdf_internal_box=\box65
 ) (./acl_latex.aux)
 \openout1 = `acl_latex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
+\scratchcounter=\count324
 \scratchdimen=\dimen296
 \scratchbox=\box66
-\nofMPsegments=\count323
-\nofMParguments=\count324
+\nofMPsegments=\count325
+\nofMParguments=\count326
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count325
+\MPscratchCnt=\count327
 \MPscratchDim=\dimen297
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -612,24 +618,24 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 27.
+Package hyperref Info: Link coloring ON on input line 28.
 (./acl_latex.out) (./acl_latex.out)
 \@outlinefile=\write4
 \openout4 = `acl_latex.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 27.
-Package microtype Info: Applying patch `item' on input line 27.
-Package microtype Info: Applying patch `toc' on input line 27.
-Package microtype Info: Applying patch `eqnum' on input line 27.
-Package microtype Info: Applying patch `footnote' on input line 27.
-Package microtype Info: Applying patch `verbatim' on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 28.
+Package microtype Info: Applying patch `item' on input line 28.
+Package microtype Info: Applying patch `toc' on input line 28.
+Package microtype Info: Applying patch `eqnum' on input line 28.
+Package microtype Info: Applying patch `footnote' on input line 28.
+Package microtype Info: Applying patch `verbatim' on input line 28.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 27.
+LaTeX Info: Redefining \showhyphens on input line 28.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -640,22 +646,22 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 28.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 29.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 28.
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 29.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 28.
+(Font)              scaled to size 12.0pt on input line 29.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zi4' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 1152) in paragraph at lines 44--45
+Underfull \hbox (badness 1152) in paragraph at lines 45--46
 \T1/ptm/m/n/10.95 (+20) trained Mar-i-anMT encoder-decoder trans-
  []
 
@@ -665,36 +671,36 @@ Underfull \hbox (badness 1152) in paragraph at lines 44--45
 
 ]
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 10.95pt on input line 81.
+(Font)              scaled to size 10.95pt on input line 82.
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \T1/ptm/m/n/10.95 (+20) Our sec-ond base-line uses pre-trained mul-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \T1/ptm/m/n/10.95 (+20) ti-lin-gual sen-tence em-bed-dings from the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \T1/zi4/m/n/10.95 paraphrase-multilingual-MiniLM-L12-v2
  []
 
 <figures/cross_lingual_alignment.png, id=126, 668.4975pt x 506.6127pt>
 File: figures/cross_lingual_alignment.png Graphic file (type png)
 <use figures/cross_lingual_alignment.png>
-Package pdftex.def Info: figures/cross_lingual_alignment.png  used on input line 87.
+Package pdftex.def Info: figures/cross_lingual_alignment.png  used on input line 88.
 (pdftex.def)             Requested size: 219.08614pt x 166.03088pt.
 [2 <./figures/cross_lingual_alignment.png>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 103.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 104.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 <figures/training_loss.png, id=148, 617.9085pt x 395.3169pt>
 File: figures/training_loss.png Graphic file (type png)
 <use figures/training_loss.png>
-Package pdftex.def Info: figures/training_loss.png  used on input line 136.
+Package pdftex.def Info: figures/training_loss.png  used on input line 137.
 (pdftex.def)             Requested size: 219.08614pt x 140.16052pt.
 
 Underfull \vbox (badness 1521) has occurred while \output is active []
@@ -703,25 +709,37 @@ Underfull \vbox (badness 1521) has occurred while \output is active []
 <figures/ngram_bleu_breakdown.png, id=166, 714.7503pt x 426.393pt>
 File: figures/ngram_bleu_breakdown.png Graphic file (type png)
 <use figures/ngram_bleu_breakdown.png>
-Package pdftex.def Info: figures/ngram_bleu_breakdown.png  used on input line 196.
+Package pdftex.def Info: figures/ngram_bleu_breakdown.png  used on input line 197.
 (pdftex.def)             Requested size: 219.08614pt x 130.69704pt.
 <figures/attention_heatmap.png, id=168, 639.5895pt x 570.933pt>
 File: figures/attention_heatmap.png Graphic file (type png)
 <use figures/attention_heatmap.png>
-Package pdftex.def Info: figures/attention_heatmap.png  used on input line 226.
+Package pdftex.def Info: figures/attention_heatmap.png  used on input line 227.
 (pdftex.def)             Requested size: 219.08614pt x 195.5695pt.
  [4 <./figures/ngram_bleu_breakdown.png> <./figures/attention_heatmap.png>]
-<figures/bleu_by_length.png, id=180, 617.9085pt x 428.5611pt>
-File: figures/bleu_by_length.png Graphic file (type png)
-<use figures/bleu_by_length.png>
-Package pdftex.def Info: figures/bleu_by_length.png  used on input line 245.
-(pdftex.def)             Requested size: 219.08614pt x 151.94734pt.
+<figures/bleu_by_length_baseline.png, id=180, 617.9085pt x 428.5611pt>
+File: figures/bleu_by_length_baseline.png Graphic file (type png)
+<use figures/bleu_by_length_baseline.png>
+Package pdftex.def Info: figures/bleu_by_length_baseline.png  used on input line 248.
+(pdftex.def)             Requested size: 186.22455pt x 129.15785pt.
+<figures/bleu_by_length_embeddings.png, id=181, 617.9085pt x 395.3169pt>
+File: figures/bleu_by_length_embeddings.png Graphic file (type png)
+<use figures/bleu_by_length_embeddings.png>
+Package pdftex.def Info: figures/bleu_by_length_embeddings.png  used on input line 255.
+(pdftex.def)             Requested size: 186.22455pt x 119.13885pt.
+<figures/bleu_by_length_seq2seq.png, id=182, 617.9085pt x 395.3169pt>
+File: figures/bleu_by_length_seq2seq.png Graphic file (type png)
+<use figures/bleu_by_length_seq2seq.png>
+Package pdftex.def Info: figures/bleu_by_length_seq2seq.png  used on input line 262.
+(pdftex.def)             Requested size: 186.22455pt x 119.13885pt.
  (./acl_latex.bbl
 Underfull \hbox (badness 2932) in paragraph at lines 5--8
 []\T1/ptm/m/n/10 (+20) Marcin Junczys-Dowmunt, Ro-man Grund-kiewicz,
  []
 
-) [5 <./figures/bleu_by_length.png>] (./acl_latex.aux)
+[5 <./figures/bleu_by_length_baseline.png> <./figures/bleu_by_length_embeddings.png> <./figures/bleu_by_length_seq2seq.png>]) [6
+
+] (./acl_latex.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -730,18 +748,18 @@ Package rerunfilecheck Info: File `acl_latex.out' has not changed.
 (rerunfilecheck)             Checksum: C518310A3555D845FD4C4898C08CCE38;3029.
  ) 
 Here is how much of TeX's memory you used:
- 25205 strings out of 474116
- 466511 string characters out of 5743681
+ 25349 strings out of 474116
+ 469583 string characters out of 5743681
  1946187 words of memory out of 5000000
- 46809 multiletter control sequences out of 15000+600000
- 616301 words of font info for 276 fonts, out of 8000000 for 9000
+ 46947 multiletter control sequences out of 15000+600000
+ 616431 words of font info for 278 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,107p,1098b,512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,12n,107p,1098b,603s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on acl_latex.pdf (5 pages, 344538 bytes).
+Output written on acl_latex.pdf (6 pages, 397244 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 60606 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 211 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 60616 words of extra memory for PDF output out of 61914 (max. 10000000)
 
